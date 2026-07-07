@@ -54,5 +54,4 @@ study_session.stop()
 study_session.get_elapsed_time()
 {% endhighlight %}
 
-**Feedback:**
-- 사용자가 실수로 `stop()`을 실행시키지 않았을 경우를 생각하지 않음
+**Feedback:** 사용자가 실수로 `stop()`을 실행시키지 않았을 경우를 생각하지 않음

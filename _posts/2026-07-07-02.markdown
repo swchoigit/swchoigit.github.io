@@ -1,0 +1,58 @@
+---
+layout: post
+title: "모음 제거"
+date: 2026-07-07
+categories: python
+---
+
+### 1번 시도: 실패
+
+{% highlight python %}
+vowels = ["a", "e", "i", "o", "u"]
+
+def remove_vowels(s):
+    i = 0
+    s_list = list(s)
+
+    for i in range(i, len(s_list)):
+        if s_list[i] in vowels:
+            del s_list[i]
+
+    return s_list
+
+remove_vowels("codeit")
+{% endhighlight %}
+
+**Feedback:** 비교하려는 문자열의 길이가 맞지 않음
+
+### 2번 시도: 실패
+
+{% highlight python %}
+vowels = ["a", "e", "i", "o", "u"]
+
+def remove_vowels(s):
+    s_list = list(s)
+
+    for item in s_list:
+        if item in vowels:
+            s_list.remove(item)
+
+    return s_list
+
+remove_vowels("codeit")
+{% endhighlight %}
+
+**Feedback:** `remove()`는 첫번째 요소만 제거함
+
+
+### 3번 시도: 해결
+
+{% highlight python %}
+vowels = ["a", "e", "i", "o", "u"]
+
+def remove_vowels(s):
+	s_list = list(s)
+	s_list = [x for x in s_list if x not in vowels]
+
+return s_list
+{% endhighlight %}
