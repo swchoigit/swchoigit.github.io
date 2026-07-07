@@ -1,0 +1,58 @@
+---
+layout: post
+title: "공부 시간 계산"
+date: 2026-07-07
+categories: python
+---
+
+### 1번 시도: 실패
+
+{% highlight python %}
+from datetime import datetime
+
+class TimeTracker:
+    def __init__(self, start_time, stop_time):
+        self.start_time = start_time
+        self.stop_time = stop_time
+
+    def start():
+    start_time = datetime.now()
+
+    def stop():
+    stop_time = datetime.now()
+{% endhighlight %}
+
+**Feedback:**
+- 불필요한 생성자
+- `timezone` 설정
+- `self` parameter 누락
+
+### 2번 시도: 해결
+
+{% highlight python %}
+from datetime import datetime
+import pytz
+
+class TimeTracker:
+    start_time = ""
+    stop_time = ""
+
+    def start(self):
+    	self.start_time = datetime.now(pytz.timezone('Asia/Seoul'))
+    	return self.start_time
+
+    def stop(self):
+    	self.stop_time = datetime.now(pytz.timezone('Asia/Seoul'))
+    	return self.stop_time
+
+    def get_elapsed_time(self):
+    	return (self.stop_time - self.start_time).total_seconds() / 60
+
+study_session = TimeTracker()
+study_session.start()
+study_session.stop()
+study_session.get_elapsed_time()
+{% endhighlight %}
+
+**Feedback:**
+- 사용자가 실수로 `stop()`을 실행시키지 않았을 경우를 생각하지 않음
