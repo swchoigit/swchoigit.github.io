@@ -31,6 +31,8 @@ theme: minima
 plugins:
   - jekyll-feed
 
+permalink: /posts/:categories/:year-:month-:day-:title/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -50,5 +52,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-permalink: /posts/:categories/:year-:month-:day-:id/
