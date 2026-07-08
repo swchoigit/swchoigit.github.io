@@ -1,0 +1,27 @@
+---
+layout: single
+title: "파일 읽기"
+date: 2026-07-08
+categories: python
+---
+
+### 1번 시도:
+
+import csv
+
+def load_tasks(filename):
+    f = open(filename, 'r')
+    lines = f.readlines()
+    f.close()
+
+    result = []
+
+    lines.pop(0)
+
+    for l in lines:
+        l = l.strip()
+        result.append(l.split(","))
+
+    return result
+
+**Feedback:** `List Comprehension` 문법 사용하기

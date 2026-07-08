@@ -1,6 +1,57 @@
 ---
-layout: post
+layout: single
 title: "입력한 숫자까지의 합계"
 date: 2026-07-07
 categories: python
 ---
+
+### 1번 시도: 실패
+
+{% highlight python %}
+def sum_up_to_n(n):
+    i = 0
+    sum1 = 0
+
+    for i in range(i, n+1):
+        if (n <= 0):
+            break
+
+    return sum1
+{% endhighlight %}
+
+### 2번 시도: 실패
+
+{% highlight python %}
+def sum_up_to_n(n):
+    i = 0
+	sum1 = 0
+
+    for i in range(0, n+1):
+		if (n <= 0):
+		break
+
+		sum1 = sum1 + i
+		i = i + 1
+
+    return sum1
+{% endhighlight %}
+
+**Feedback:**
+- 불필요한 `i` 선언
+- 불필요한 덧셈: `i = i + 1`
+- 조건문 위치
+- 복합 대입 연산자 사용 권장: `+=`
+
+### 3번 시도: 해결
+{% highlight python %}
+def sum_up_to_n(n):
+	if n <= 0:
+		return 0
+
+	sum1 = 0
+
+	for i in range(0, n+1):
+		sum1 += i
+
+    return sum1
+{% endhighlight %}

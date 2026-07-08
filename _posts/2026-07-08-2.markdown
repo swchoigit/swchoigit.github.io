@@ -1,0 +1,62 @@
+---
+layout: single
+title: "식당 예약 시스템"
+date: 2026-07-08
+categories: python
+---
+
+### 1번 시도:
+
+{% highlight python %}
+class ReservationSystem:
+	restaurants = {}
+	branch_name = ""
+	reservations = []
+
+def __init__(self, branch_name):
+	self.branch_name = branch_name
+	ReservationSystem.restaurants[branch_name] = []
+  
+def add_reservation(self, customer, date, count):
+	self.reservations.append([customer, date, count])
+	ReservationSystem.restaurants[self.branch_name] = [customer, date, count]
+{% endhighlight %}
+
+**Feedback:** 인스턴스 변수를 클래스 변수 위치에 선언하지 않아도 된다.
+
+### 2번 시도:
+
+{% highlight python %}
+class ReservationSystem:
+	restaurants = {}
+
+def __init__(self, branch_name):
+	self.branch_name = branch_name
+	ReservationSystem.restaurants[branch_name] = []
+
+def add_reservation(self, customer, date, count):
+	self.reservations = []
+	self.reservations.append([customer, date, count])
+	ReservationSystem.restaurants[self.branch_name] = [customer, date, count]
+{% endhighlight %}
+
+
+**Feedback:**
+- `self.reservations` 초기화 위치
+- `self.reservations`를 활용하지 않음
+
+### 3번 시도:
+
+{% highlight python %}
+class ReservationSystem:
+  restaurants = {}
+
+  def __init__(self, branch_name):
+    self.branch_name = branch_name
+    self.reservations = []
+    ReservationSystem.restaurants[branch_name] = []
+
+  def add_reservation(self, customer, date, count):
+    self.reservations.append([customer, date, count])
+    ReservationSystem.restaurants[self.branch_name] = self.reservations
+{% endhighlight %}

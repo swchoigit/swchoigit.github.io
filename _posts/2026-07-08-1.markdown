@@ -1,0 +1,37 @@
+---
+layout: single
+title: "숫자인지 확인"
+date: 2026-07-08
+categories: python
+---
+
+### 1번 시도: 실패
+
+{% highlight python %}
+def add_numbers():
+	num1 = int(input("첫 번째 숫자를 입력하세요: "))
+	num2 = int(input("두 번째 숫자를 입력하세요: "))
+  
+	if (type(num1) is not int or type(num2) is not int):
+		return "올바른 숫자를 입력하세요."
+	
+	return num1 + num2
+{% endhighlight %}
+
+
+**Feekback:** `input()`의 결과는 항상 문자열이다.
+
+### 2번 시도: 해결
+
+{% highlight python %}
+def add_numbers():
+	num1 = input("첫 번째 숫자를 입력하세요: ")
+	num2 = input("두 번째 숫자를 입력하세요: ")
+  
+	if (not num1.isdecimal() or not num2.isdecimal()):
+		return "올바른 숫자를 입력하세요."
+	
+	return int(num1) + int(num2)
+{% endhighlight %}
+
+**해결 방법:** `isdecimal()`을 이용하여 해결

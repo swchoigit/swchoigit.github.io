@@ -1,0 +1,67 @@
+---
+layout: single
+title: "중복 확인"
+date: 2026-07-08
+categories: python
+---
+
+### 1번 시도:
+
+{% highlight python %}
+def count_repetitions(s):
+	repeat = 0
+
+	for i in range(0, len(s)):
+		if s[i] == s[i+1]:
+			repeat += 1
+
+	return f"{s[i]}{repeat}"
+
+count_repetitions("aaabbaaa")
+{% endhighlight %}
+
+**Feedback:**
+- `return`문의 위치
+- `IndexError`
+- `repeat`의 초깃값
+- `else` 문의 부재
+
+### 2번 시도: 실패
+
+{% highlight python %}
+def count_repetitions(s):
+	repeat = 1
+
+	for i in range(0, len(s)):
+		if s[i] == s[i+1]:
+			repeat += 1
+		else:
+			result += f"{s[i]}{repeat}"
+			repeat = 1
+
+		return result
+
+count_repetitions("aaabbaaa")
+{% endhighlight %}
+
+**Feedback:** `IndexError`
+
+### 3번 시도: 해결
+
+{% highlight python %}
+def count_repetitions(s):
+	repeat = 1
+
+	for i in range(0, len(s)-1):
+		if s[i] == s[i+1]:
+			repeat += 1
+		else:
+			result += f"{s[i]}{repeat}"
+			repeat = 1
+			
+	result += f"{s[-1]}{repeat}"
+	
+	return result
+
+count_repetitions("aaabbaaa")
+{% endhighlight %}
