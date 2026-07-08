@@ -7,9 +7,10 @@ categories: python
 
 ### 1번 시도:
 
+{% highlight python %}
 import csv
 
-def load_tasks(filename):
+def load_file(filename):
     f = open(filename, 'r')
     lines = f.readlines()
     f.close()
@@ -23,5 +24,6 @@ def load_tasks(filename):
         result.append(l.split(","))
 
     return result
+{% endhighlight %}
 
 **Feedback:** `List Comprehension` 문법 사용하기
