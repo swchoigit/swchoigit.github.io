@@ -27,9 +27,10 @@ twitter_username:
 github_username: swchoigit
 
 # Build settings
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
 
 permalink: /posts/:categories/:year-:month-:day-:title/
 
