@@ -27,7 +27,7 @@ twitter_username:
 github_username: swchoigit
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 

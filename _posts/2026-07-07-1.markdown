@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "공부 시간 계산"
+title: "시간 계산"
 date: 2026-07-07
 categories: python
 ---

@@ -23,7 +23,7 @@ def remove_vowels(s):
 remove_vowels("codeit")
 {% endhighlight %}
 
-**Feedback:** 비교하려는 문자열의 길이가 맞지 않음
+**Feedback:** 비교하려는 문자열의 길이가 맞지 않을 수도 있음
 
 ### 2번 시도: 실패
 

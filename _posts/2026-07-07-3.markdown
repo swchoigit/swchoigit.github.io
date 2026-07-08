@@ -1,0 +1,6 @@
+---
+layout: post
+title: "입력한 숫자까지의 합계"
+date: 2026-07-07
+categories: python
+---
