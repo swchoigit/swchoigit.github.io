@@ -10,7 +10,7 @@ plugins:
 title: Soonwoo Choi
 email:
 description:
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "https://swchoigit.github.io"
 twitter_username:
 github_username: swchoigit
@@ -31,6 +31,7 @@ defaults:
       toc: true
       toc_sticky: true
       toc_label: "On this page"
+      class: wide
 
 include:
   - _pages
