@@ -8,9 +8,17 @@
   text-decoration: none !important;
 }
 
+.page__title {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.page__meta {
+  margin-bottom: 2em;
+}
+
 .page {
   float: left;
-  width: 100%;
 
   @include breakpoint($large) {
     padding-left: 0;

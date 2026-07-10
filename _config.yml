@@ -1,5 +1,5 @@
 # Build settings
-# theme: minimal-mistakes-jekyll
+theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 plugins:
   - jekyll-feed
@@ -32,6 +32,7 @@ defaults:
       toc_sticky: true
       toc_label: "On this page"
       class: wide
+      show_date: true
 
 include:
   - _pages
