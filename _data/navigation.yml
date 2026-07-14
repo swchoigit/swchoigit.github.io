@@ -1,3 +1,10 @@
-nav:
+main: []
+
+custom-sidebar:
   - title: "Python"
-    url:
+    url: /categories/python
+    children:
+      - title: "Basics"
+        url: /categories/python/basics
+  - title: "Data Science"
+    url: /categories/data_science
