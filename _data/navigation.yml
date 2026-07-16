@@ -1,6 +1,10 @@
 main: []
 
 custom-sidebar:
+  - title: "VS Code"
+    url: /categories/vscode
+  - title: "Programming"
+    url: /categories/programming
   - title: "Python"
     url: /categories/python
     children:

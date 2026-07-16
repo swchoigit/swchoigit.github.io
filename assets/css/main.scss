@@ -5,7 +5,7 @@
 @import "minimal-mistakes";
 
 .archive__item a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .page__title {
@@ -32,4 +32,11 @@
   @include breakpoint($x-large) {
     padding-right: 0;
   }
+}
+
+table {
+  width: 100% !important;
+  display: table !important;
+  table-layout: fixed;
+  word-break: break-all;
 }

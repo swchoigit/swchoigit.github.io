@@ -8,11 +8,7 @@ plugins:
 
 # Site settings
 title: Soonwoo Choi
-email:
-description:
-baseurl: ""
 url: "https://swchoigit.github.io"
-twitter_username:
 github_username: swchoigit
 
 permalink: /posts/:categories/:year-:month-:day-:title/
@@ -35,4 +31,4 @@ defaults:
       show_date: true
 
 include:
-  - _pages
+  - _categories
