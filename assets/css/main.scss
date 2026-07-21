@@ -3,40 +3,4 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
-
-.archive__item a {
-  text-decoration: none;
-}
-
-.page__title {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.page__meta {
-  margin-bottom: 2em;
-}
-
-.page {
-  float: left;
-
-  @include breakpoint($large) {
-    padding-left: 0;
-  }
-  @include breakpoint($x-large) {
-    padding-left: 0;
-  }
-  @include breakpoint($large) {
-    padding-right: 0;
-  }
-  @include breakpoint($x-large) {
-    padding-right: 0;
-  }
-}
-
-table {
-  width: 100% !important;
-  display: table !important;
-  table-layout: fixed;
-  word-break: break-all;
-}
+@import "custom";
