@@ -1,24 +1,54 @@
-# Build settings
-# theme: minimal-mistakes-jekyll
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+# Theme Settings
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+# Theme Settings
+theme: minimal-mistakes-jekyll
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
+
+# Site Settings
+title: Soonwoo Choi
+url: "https://swchoigit.github.io"
+github_username: swchoigit
+
+# Reading Files
+include:
+  - _categories
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+  quiet_deps: true
+  silence_deprecations: ["import"]
+
+# Outputting
+permalink: /:categories/:title/
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-paginate
 
-# Site settings
-title: Soonwoo Choi
-url: "https://swchoigit.github.io"
-github_username: swchoigit
-
-permalink: /posts/:categories/:year-:month-:day-:title/
-paginate: 5
-paginate_path: "/page:num/"
-
+# Archives
 category_archive:
   type: liquid
   path: /categories/
 
+# Defaults
 defaults:
   - scope:
       type: "posts"
@@ -26,9 +56,11 @@ defaults:
       layout: "single"
       toc: true
       toc_sticky: true
-      toc_label: "On this page"
       class: wide
       show_date: true
-
-include:
-  - _categories
+  - scope:
+      path: "_categories"
+    values:
+      layout: "category"
+      sidebar:
+        nav: "custom-sidebar"

@@ -1,5 +1,5 @@
 ---
 title: "Data Science"
-layout: categories
+taxonomy: data_science
 permalink: /categories/data_science
 ---

@@ -1,14 +1,14 @@
 main: []
 
 custom-sidebar:
-  - title: "VS Code"
-    url: /categories/vscode
-  - title: "Programming"
-    url: /categories/programming
+  - title: "Bootcamp"
+    url: /categories/bootcamp
+  - title: "Data Science"
+    url: /categories/data_science
   - title: "Python"
     url: /categories/python
     children:
       - title: "Basics"
         url: /categories/python/basics
-  - title: "Data Science"
-    url: /categories/data_science
+  - title: "VS Code"
+    url: /categories/vscode

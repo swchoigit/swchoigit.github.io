@@ -1,4 +1,5 @@
 ---
-layout: categories
+title: Python
+taxonomy: python
 permalink: /categories/python
 ---
