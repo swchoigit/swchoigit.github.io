@@ -25,13 +25,11 @@ include:
 
 # Sass/SCSS
 sass:
-  sass_dir: _sass
-  style: compressed
   quiet_deps: true
   silence_deprecations: ["import"]
 
 # Outputting
-permalink: /:categories/:title/
+permalink: /:categories/:year-:month-:day-:title/
 
 # Pagination
 paginate: 5
@@ -56,8 +54,8 @@ defaults:
       layout: "single"
       toc: true
       toc_sticky: true
-      class: wide
       show_date: true
+      related: true
   - scope:
       path: "_categories"
     values:
