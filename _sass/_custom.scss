@@ -24,24 +24,57 @@
   }
 }
 
-table {
-  display: table;
-  table-layout: fixed;
-  word-break: break-all;
+.toc {
+  border: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  .nav__title {
+    background: 0;
+    color: inherit;
+    font-size: 0.7em;
+  }
 }
 
 .toc__menu {
+  position: relative;
+  padding-left: 0.5rem;
+
   a {
     display: block;
+    position: relative;
+    padding-left: 0.8rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    border: 0;
+    border-bottom: 0;
+    color: #8c8c8c;
+    transition: color 0.15s ease-in-out;
+
+    &::before {
+      background-color: #eee;
+      content: " ";
+      display: inline-block;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      width: 1px;
+      transition: background-color 0.15s ease-in-out;
+    }
+
+    &:hover {
+      color: #0550ae;
+    }
   }
 
   li.active > a {
     color: #0550ae;
-    font-weight: 600;
+    font-weight: bold;
+
+    &::before {
+      background-color: #0550ae;
+    }
   }
 
   .active a {
@@ -50,7 +83,7 @@ table {
 }
 
 *:has(> .pagination--pager) {
-  display: none !important;
+  display: none;
 }
 
 .page__related {
