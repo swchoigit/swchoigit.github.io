@@ -23,6 +23,10 @@ github_username: swchoigit
 include:
   - _categories
 
+# Markdown Processing
+kramdown:
+  toc_levels: 1..6
+
 # Sass/SCSS
 sass:
   quiet_deps: true
@@ -45,6 +49,9 @@ plugins:
 category_archive:
   type: liquid
   path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
 
 # Defaults
 defaults:

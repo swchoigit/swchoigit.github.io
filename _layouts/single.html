@@ -65,7 +65,7 @@ layout: default
       {% endunless %}
 
       <section class="page__content e-content" itemprop="text">
-        {% if page.toc and content contains '<h' %}
+        {% if page.toc %}
           <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
             <nav class="toc" aria-label="Table of contents">
               <h4 class="nav__title">
