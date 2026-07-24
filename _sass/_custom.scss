@@ -61,7 +61,7 @@
     color: #757575;
     transition: top 0.2s ease-in-out;
     animation: 0.8s fade-up;
-    font-weight: 600;
+    font-weight: 500;
 
     &::before {
       background-color: #eee;
@@ -83,11 +83,14 @@
   li.active > a {
     color: #0550ae;
     font-weight: 600;
-    background: none;
 
     &::before {
       background-color: #0550ae;
     }
+  }
+
+  .active a {
+    background: none;
   }
 }
 
