@@ -24,6 +24,16 @@
   }
 }
 
+.sidebar__right {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .sidebar__right {
+    display: block;
+  }
+}
+
 .toc {
   border: 0;
   box-shadow: none;
@@ -32,7 +42,7 @@
   .nav__title {
     background: 0;
     color: inherit;
-    font-size: 0.7em;
+    font-weight: 600;
   }
 }
 
@@ -48,8 +58,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     border-bottom: 0;
-    color: #8c8c8c;
-    transition: color 0.15s ease-in-out;
+    color: #757575;
+    transition: top 0.2s ease-in-out;
+    animation: 0.8s fade-up;
+    font-weight: 600;
 
     &::before {
       background-color: #eee;
@@ -70,15 +82,12 @@
 
   li.active > a {
     color: #0550ae;
-    font-weight: bold;
+    font-weight: 600;
+    background: none;
 
     &::before {
       background-color: #0550ae;
     }
-  }
-
-  .active a {
-    background: none;
   }
 }
 
