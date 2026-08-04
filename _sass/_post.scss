@@ -1,0 +1,27 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .post-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .post-title {
+    font-size: 40px;
+    font-weight: 460;
+  }
+
+  .post-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-block-end: 1em;
+    }
+  }
+}
