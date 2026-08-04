@@ -1,0 +1,21 @@
+:root {
+  --site-font-family:
+    -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 17px;
+  font-weight: 400;
+  font-family: var(--site-font-family);
+  color: #1d1d1f;
+}
+
+ul {
+  list-style: none;
+}
