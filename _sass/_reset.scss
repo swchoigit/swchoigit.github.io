@@ -12,6 +12,12 @@
   padding: 0;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   line-height: 1.5;
   font-size: 17px;
@@ -30,6 +36,12 @@ h2 {
 
 h3 {
   font-size: 1.25em;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 code,

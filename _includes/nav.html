@@ -1,14 +1,19 @@
 <nav class="site-nav">
   <div class="site-wrapper">
     <a class="site-logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <ul class="social">
-      {% for item in site.data.navigation.social %}
-        <li>
-          <a href="{{ item.url }}" aria-label="{{ item.name }}" target="_blank" rel="noopener noreferrer">
-            {% include {{ item.name | downcase }}.html %}
-          </a>
-        </li>
-      {%- endfor %}
-    </ul>
+    <div class="site-nav-right">
+      <ul class="social">
+        {% for item in site.data.navigation.social %}
+          <li>
+            <a href="{{ item.url }}" aria-label="{{ item.name }}" target="_blank" rel="noopener noreferrer">
+              {% include icons/{{ item.name | downcase }}.html %}
+            </a>
+          </li>
+        {%- endfor %}
+      </ul>
+      <button class="site-search">
+        {% include icons/search.html %}
+      </button>
+    </div>
   </div>
 </nav>
