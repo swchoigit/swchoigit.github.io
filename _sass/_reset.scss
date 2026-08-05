@@ -5,6 +5,7 @@
   --fontStack-monospace:
     ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
     monospace;
+  --color-border-muted: hsla(210, 18%, 87%, 1);
 }
 
 * {
@@ -26,6 +27,10 @@ body {
   color: #1d1d1f;
 }
 
+a {
+  color: rgb(9, 105, 218);
+}
+
 h1 {
   font-size: 2em;
 }
@@ -42,6 +47,26 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.75rem 0.5rem 6px 13px;
+  border-bottom: 1px solid var(--color-border-muted);
+  box-shadow: (216, 222, 228) 0px -1px 0px 0px inset;
+  font-size: 16px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+th {
+  border-bottom-width: 2px;
 }
 
 code,

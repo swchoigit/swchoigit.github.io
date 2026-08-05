@@ -3,13 +3,13 @@
   height: 52px;
   border-bottom: 1px solid #b6bfb8;
 
-  > .site-wrapper {
+  .site-wrapper {
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    > .site-logo {
+    .site-logo {
       text-decoration: none;
       color: inherit;
     }
@@ -33,7 +33,7 @@
 
   svg {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 }
