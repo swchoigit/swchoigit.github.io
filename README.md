@@ -4,5 +4,9 @@ Jekyll blog
 
 ## Customization
 * Home: [Apple Security Research](https://security.apple.com/blog/)
-* Content: [GitHub](https://brand.github.com)
-* TOC: [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)
+* Content:
+    * [GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+    * [rehype-callouts](https://github.com/lin-stephanie/rehype-callouts)
+
+## Markdown Guide
+[GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)

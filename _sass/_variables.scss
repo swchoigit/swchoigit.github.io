@@ -1,0 +1,30 @@
+:root {
+  --fontStack-sansSerif:
+    -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji;
+  --fontStack-monospace:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  --color-border-muted: hsla(210, 18%, 87%, 1);
+  --color-alert: hsla(210, 18%, 87%, 1);
+
+  [data-callout="note"] {
+    --color-alert: rgb(9, 105, 218);
+  }
+
+  [data-callout="tip"] {
+    --color-alert: #1a7f37;
+  }
+
+  [data-callout="important"] {
+    --color-alert: #8250df;
+  }
+
+  [data-callout="warning"] {
+    --color-alert: #9a6700;
+  }
+
+  [data-callout="caution"] {
+    --color-alert: #d1242f;
+  }
+}
