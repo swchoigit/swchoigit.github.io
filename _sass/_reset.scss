@@ -63,3 +63,10 @@ code,
 pre {
   font-family: var(--fontStack-monospace);
 }
+
+img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 85%;
+  max-height: 600px;
+}
