@@ -106,4 +106,8 @@ blockquote[data-callout] {
       margin-right: 0.5rem;
     }
   }
+
+  ul:last-child {
+    margin-bottom: 0;
+  }
 }
