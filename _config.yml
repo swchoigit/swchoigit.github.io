@@ -1,8 +1,7 @@
 # Site Settings
 title: Soonwoo Choi
-email: tnsdn94560@gmail.com
-baseurl: ""
-url: ""
+url: "https://soonwoochoi.github.io"
+domain: "soonwoochoi.github.io"
 github_username: swchoigit
 
 # Build settings

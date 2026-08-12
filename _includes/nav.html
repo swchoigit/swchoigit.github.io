@@ -6,14 +6,12 @@
         {% for item in site.data.navigation.social %}
           <li>
             <a href="{{ item.url }}" aria-label="{{ item.name }}" target="_blank" rel="noopener noreferrer">
-              {% include icons/{{ item.name | downcase }}.html %}
+              {% include icons/icon-{{ item.name | downcase }}.html %}
             </a>
           </li>
         {%- endfor %}
       </ul>
-      <button class="site-search">
-        {% include icons/search.html %}
-      </button>
+      {% include search.html %}
     </div>
   </div>
 </nav>

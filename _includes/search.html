@@ -1,0 +1,38 @@
+<button class="site-search">
+  {% include icons/icon-search.html %}
+</button>
+
+<ninja-keys placeholder="Search {{ site.domain }}"> </ninja-keys>
+
+<script type="module">
+  const ninja = document.querySelector('ninja-keys');
+  const response = await fetch('{{ "/search.json" | relative_url }}');
+  const posts = await response.json();
+
+  const modal = ninja.shadowRoot.querySelector('.modal-body');
+  modal.style.display = 'none';
+
+  ninja.addEventListener('change', (e) => {
+    const query = e.detail.search.trim();
+    const filtered = posts.filter((x) => x.title.includes(query));
+
+    if (query && filtered.length > 0) {
+      modal.style.display = 'block';
+      ninja.data = filtered.map((post) => ({
+        id: post.url,
+        title: post.title,
+        section: 'Posts',
+        handler: () => {
+          window.location.href = post.url;
+        },
+      }));
+    } else {
+      modal.style.display = 'none';
+      ninja.data = [];
+    }
+  });
+
+  document.querySelector('.site-search').addEventListener('click', (e) => {
+    ninja.open();
+  });
+</script>
