@@ -9,4 +9,10 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
+  <footer class="post-categories">
+    {% for cate in page.categories %}
+      <code>{{ cate }}</code>
+      {%- unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </footer>
 </article>

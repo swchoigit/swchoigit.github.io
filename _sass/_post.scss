@@ -87,6 +87,17 @@
   }
 }
 
+.post-categories {
+  text-align: left;
+
+  code {
+    padding: 0.2em 0.4em;
+    font-size: 14px;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+  }
+}
+
 blockquote[data-callout] {
   padding: 0.5rem 1rem;
   margin: 1rem 0px;
