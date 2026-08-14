@@ -1,13 +1,23 @@
-import { codeToHtml } from "https://esm.sh/shiki@3.0.0";
+import { createHighlighter } from "https://esm.sh/shiki@3.0.0";
 
 const blocks = document.querySelectorAll("pre > code[class*='language-']");
 
-for (const block of blocks) {
-  const lang = block.className.replace("language-", "") || "text";
-  const highlightedHtml = await codeToHtml(block.innerText, {
-    lang: lang,
-    theme: "github-light",
+if (blocks.length > 0) {
+  const langs = new Set(
+    Array.from(blocks, (b) => b.className.replace("language-", "") || "text"),
+  );
+
+  const highlighter = await createHighlighter({
+    langs: [...langs],
+    themes: ["github-light"],
   });
 
-  block.closest("pre").outerHTML = highlightedHtml;
+  blocks.forEach((block) => {
+    const highlightedHtml = highlighter.codeToHtml(block.innerText, {
+      lang: block.className.replace("language-", "") || "text",
+      theme: "github-light",
+    });
+
+    block.closest("pre").outerHTML = highlightedHtml;
+  });
 }

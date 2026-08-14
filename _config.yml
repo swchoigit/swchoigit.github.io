@@ -13,7 +13,6 @@ highlighter: none
 
 # Markdown Processing
 kramdown:
-  hard_wrap: true
   syntax_highlighter: null
   syntax_highlighter_opts:
     disable: true
