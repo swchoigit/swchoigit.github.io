@@ -7,24 +7,15 @@
     monospace;
   --color-border-muted: hsla(210, 18%, 87%, 1);
   --color-alert: hsla(210, 18%, 87%, 1);
+  --bgColor-muted: #f6f8fa;
+  --fgColor-accent: #0969da;
+  --fgColor-success: #1a7f37;
+  --fgColor-done: #8250df;
+  --fgColor-attention: #9a6700;
+  --fgColor-danger: #d1242f;
+}
 
-  [data-callout="note"] {
-    --color-alert: rgb(9, 105, 218);
-  }
-
-  [data-callout="tip"] {
-    --color-alert: #1a7f37;
-  }
-
-  [data-callout="important"] {
-    --color-alert: #8250df;
-  }
-
-  [data-callout="warning"] {
-    --color-alert: #9a6700;
-  }
-
-  [data-callout="caution"] {
-    --color-alert: #d1242f;
+@media (prefers-color-scheme: dark) {
+  [data-theme="dark"] {
   }
 }

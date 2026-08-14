@@ -76,7 +76,7 @@
     padding: 16px;
     overflow: auto;
     line-height: 1.45;
-    background-color: #f6f8fa;
+    background-color: var(--bgColor-muted);
     border-radius: 6px;
 
     code {
@@ -95,30 +95,5 @@
     font-size: 14px;
     background-color: rgba(175, 184, 193, 0.2);
     border-radius: 6px;
-  }
-}
-
-blockquote[data-callout] {
-  padding: 0.5rem 1rem;
-  margin: 1rem 0px;
-  border-left: 0.25em solid var(--color-alert);
-  font-size: 16px;
-
-  .alert-title {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    line-height: 1;
-    color: var(--color-alert);
-
-    svg {
-      width: 16px;
-      height: 16px;
-      margin-right: 0.5rem;
-    }
-  }
-
-  ul:last-child {
-    margin-bottom: 0;
   }
 }

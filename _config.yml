@@ -8,6 +8,9 @@ github_username: swchoigit
 plugins:
   - jekyll-feed
 
+# Conversion
+highlighter: none
+
 # Markdown Processing
 kramdown:
   hard_wrap: true

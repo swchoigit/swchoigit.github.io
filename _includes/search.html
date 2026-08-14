@@ -14,7 +14,7 @@
 
   ninja.addEventListener('change', (e) => {
     const query = e.detail.search.trim();
-    const filtered = posts.filter((x) => x.title.includes(query));
+    const filtered = posts.filter((x) => x.title.toLowerCase().includes(query));
 
     if (query && filtered.length > 0) {
       modal.style.display = 'block';
