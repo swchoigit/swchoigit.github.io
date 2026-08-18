@@ -1,5 +1,18 @@
-social:
-  - name: "GitHub"
-    url: "https://github.com/swchoigit"
-  - name: "LinkedIn"
-    url: "www.linkedin.com/in/soonwoochoi"
+menu:
+  - name: "Bootcamp"
+    url: /bootcamp
+  - name: "Data Science"
+    url: /data-science
+  - name: "Java"
+    url: /java
+  - name: "Machine Learning"
+    url: /machine-learning
+  - name: "Python"
+    url: /python
+    children:
+      - name: "Basics"
+        url: /python/basics
+  - name: "Tools"
+    url: /tools
+  - name: "Web Development"
+    url: /web-development

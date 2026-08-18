@@ -7,6 +7,7 @@ github_username: swchoigit
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-archives
 
 # Conversion
 highlighter: none
@@ -26,6 +27,14 @@ sass:
 
 # Outputting
 permalink: /:categories/:year-:month-:day-:title/
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: "/:name/"
 
 # Defaults
 defaults:

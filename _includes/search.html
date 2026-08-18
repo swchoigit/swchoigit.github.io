@@ -6,6 +6,15 @@
 
 <script type="module">
   const ninja = document.querySelector('ninja-keys');
+
+  ninja.updateComplete?.then(() => {
+    const modal = ninja.shadowRoot.querySelector('.modal-content');
+    if (modal) {
+      modal.style.backdropFilter = 'saturate(180%) blur(20px)';
+      modal.style.webkitBackdropFilter = 'saturate(180%) blur(20px)';
+    }
+  });
+
   const response = await fetch('{{ "/search.json" | relative_url }}');
   const posts = await response.json();
 
@@ -32,7 +41,15 @@
     }
   });
 
-  document.querySelector('.site-search').addEventListener('click', (e) => {
-    ninja.open();
-  });
+  document.querySelector('.site-search').onclick = () => ninja.open();
 </script>
+
+<style>
+  ninja-keys {
+    --ninja-modal-background: rgba(255, 255, 255, 0.8);
+  }
+
+  ninja-keys::part(ninja-selected) {
+    border: none;
+  }
+</style>

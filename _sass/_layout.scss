@@ -25,19 +25,14 @@
     }
   }
 
-  .site-nav-right {
+  .site-menu {
+    list-style: none;
     display: flex;
     align-items: center;
     gap: 1em;
-  }
-
-  .social {
-    list-style: none;
-    display: flex;
-    gap: 1em;
 
     a {
-      color: inherit;
+      font-size: 14px;
     }
   }
 
