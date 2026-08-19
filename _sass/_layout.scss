@@ -20,8 +20,8 @@
     align-items: center;
 
     .site-logo {
-      text-decoration: none;
-      color: inherit;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
   }
 
@@ -31,15 +31,41 @@
     align-items: center;
     gap: 1em;
 
+    li {
+      white-space: nowrap;
+    }
+
     a {
       font-size: 14px;
+    }
+
+    @media (max-width: 833px) {
+      display: none;
+    }
+  }
+
+  .site-actions {
+    display: flex;
+    align-items: center;
+
+    button {
+      padding: 0 calc(8px / 1);
+    }
+  }
+
+  #site-menu-mobile {
+    display: none;
+    padding-right: 0;
+
+    @media (max-width: 833px) {
+      display: block;
     }
   }
 
   svg {
     display: block;
     width: 20px;
-    height: 20px;
+    height: 52px;
   }
 }
 

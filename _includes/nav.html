@@ -1,18 +1,18 @@
 <nav class="site-nav">
   <div class="site-wrapper">
     <a class="site-logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <div class="site-nav-right">
-      <ul class="site-menu">
-        {% for item in site.data.navigation.menu %}
-          <li>
-            <a href="{{ item.url }}" aria-label="{{ item.name }}">{{ item.name }} </a>
-          </li>
-        {%- endfor %}
-        <a href="/about">
-          {% include icons/icon-info.html %}
-        </a>
-        {% include search.html %}
-      </ul>
+    <ul class="site-menu">
+      {% for item in site.data.navigation.menu %}
+        <li>
+          <a href="{{ item.url }}" aria-label="{{ item.name }}">{{ item.name }} </a>
+        </li>
+      {%- endfor %}
+    </ul>
+    <div class="site-actions">
+      {% include search.html %}
+      <button id="site-menu-mobile">
+        {% include icons/icon-menu.html %}
+      </button>
     </div>
   </div>
 </nav>

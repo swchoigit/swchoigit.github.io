@@ -16,3 +16,5 @@ menu:
     url: /tools
   - name: "Web Development"
     url: /web-development
+  - name: "About"
+    url: /about
